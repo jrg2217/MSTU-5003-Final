@@ -1,0 +1,117 @@
+#header {
+  background-color: #5c93ed;
+  text-align: center;
+}
+
+#header a {
+  color: black;
+  text-decoration: underline;
+}
+
+#search {
+  text-align: center;
+}
+
+.article {
+  margin: 0px 50px 0px 50px;
+  border: 3px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #444444;
+  background-color: #dddddd;
+}
+
+.articleURL {
+  width: 75%;
+  cursor: not-allowed;
+  margin: 3px;
+}
+
+.articleURL::placeholder {
+  opacity: 1;
+}
+
+.articleHeader {
+  color: black;
+}
+
+.articleHeader:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.articleContent {
+  margin: 0px 10px 10px 10px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+}
+
+#judge {
+  text-align: center;
+}
+
+#explanation {
+  width: 75%;
+  height: 150px;
+}
+
+.btn-block {
+  width: 75%;
+  margin-left: 12.5%;
+}
+
+#footer {
+  text-align: center;
+  background-color: #5c93ed;
+  margin-top: 10px;
+}
+
+.searchResult {
+  text-align: left;
+  display: none;
+}
+
+#notes {
+  position: fixed;
+  width: 75%;
+  height: 75%;
+  left: 12.5%;
+  right: 12.5%;
+  top: 12.5%;
+  bottom: 12.5%;
+  background-color: white;
+  z-index: 2;
+  display: none;
+  outline: 1px solid black;
+  box-shadow: 3px 3px 5px #222222;
+  overflow: scroll;
+}
+
+#openNotes {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  opacity: 0.5;
+  background-color: #f4b642;
+  z-index: 1;
+}
+
+#openNotes:hover {
+  cursor: pointer;
+}
+
+#closeNotes {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  opacity: 0.5;
+  background-color: #f4b642;
+}
+
+#closeNotes:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bird Elections</title>
+  <script src="https://kit.fontawesome.com/efb85c0905.js"></script>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css">
+</head>
+
+<body>
+  <div id="header" class="jumbotron jumbotron-fluid">
+    <h1>Bird Elections</h1>
+    <hr>
+    <h3>An educational browser game about<br>news, propaganda, and misinformation</h3>
+    <a href="https://hackmd.io/C09pWphoROmKaxW20jyXnA?view" target="_blank">(Supplemental Rationale Document) <i class="fas fa-external-link-alt"></i></a>
+  </div>
+
+  <div id="openNotes" onclick="openNotes()">Open Notes</div>
+  <div id="notes">
+    <div id="closeNotes" onclick="closeNotes()">Close Notes</div>
+  </div>
+  <div id="narrative" class="container">
+    The year is 2004 B.E. (Bird Era), and the election for the next Bird President is in full swing. The citizens of UBSBA (United Bird States of Bird America) are facing an onslaught of misinformation and propaganda masquerading as legitimate news.<br><br>    Your job is to figure out how to categorize the news you find armed with nothing but your wits and a search bar. By plugging keywords in, you'll uncover information about the claims made and the people who made them.
+  </div>
+
+  <div class="container">
+    <h3>Article</h3>
+    <div class="card article">
+      <input class="articleURL" type="text" placeholder="https://www.ostrichpost.com/8172004/" readonly></input>
+      <a class="articleHeader" href="#">
+        <h3>The Ostrich Post</h3>
+      </a>
+      <h4>Bird Presidential candidate Bruce Featherby recorded saying nests should be made out of rocks instead of twigs</h4><br>
+      <p class="articleContent">Late this Wednesday, a recording surfaced on the Bird Internet of Bruce Featherby making the controversial statement that he would require nests to be made out of rocks instead of twigs if elected Bird President. The recording first emerged on the
+        notorious GooseTube channel HoodTheRobin before going viral.</p>
+    </div>
+  </div>
+
+  <!--The concept is for users to search keywords that'll return additional information about the article, source, etc.-->
+  <div id="search" class="container">
+    <form>
+      <input type="search" placeholder="What will you search for?" id="searchBar">
+      <button type="button" class="btn btn-primary" onclick="searchTerm()">Search</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="TESTRESULT"></div>
+    <div class="card searchResult HOODTHEROBIN" id="htr1">
+      <h5><a href="#">GooseTube channel HoodTheRobin exposed for fraudulent videos</a></h5>
+      <p style="font-size: 13px">Popular GooseTube channel HoodTheRobin, known for exposing public figures' controversial opinions, was found to have selectively edited together clips to give the impression ...</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(htr1)">Save</button>
+    </div>
+    <div class="card searchResult HOODTHEROBIN" id="htr2">
+      <h5><a href="#">HoodTheRobin example 2</a></h5>
+      <p style="font-size: 13px">Blah blah blah silly bird puns blah blah blah blah blah ...</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(htr2)">Save</button>
+    </div>
+    <div class="card searchResult FEATHERBY BRUCEFEATHERBY" id="featherby1">
+      <h5><a href="#">Bird Presidential candidate Bruce Featherby: What you need to know</a></h5>
+      <p style="font-size: 13px">Bruce Featherby is a Bird Senator in the state of Bird Rhode Island, currently running for Bird President. He is a member of the Free Corn For All party ...</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(featherby1)">Save</button>
+    </div>
+    <div class="card searchResult FEATHERBY BRUCEFEATHERBY" id="featherby2">
+      <h5><a href="#">Bruce Featherby example 2</a></h5>
+      <p style="font-size: 13px">Blah blah blah, just giving an example of how this might work, it's probably not the most efficient method of doing this but oh well ...</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(featherby2)">Save</button>
+    </div>
+    <div class="card searchResult FEATHERBY BRUCEFEATHERBY" id="featherby3">
+      <h5><a href="#">Bruce Featherby example 3</a></h5>
+      <p style="font-size: 13px">JavaScript is fun!</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(featherby3)">Save</button>
+    </div>
+    <div class="card searchResult OSTRICH OSTRICHPOST THEOSTRICHPOST" id="ostrich1">
+      <h5><a href="#">Ostrich Post example</a></h5>
+      <p style="font-size: 13px">Actually, The Ostrich Post is a fake website made up by a programming student.</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(ostrich1)">Save</button>
+    </div>
+    <div class="card searchResult OSTRICH OSTRICHPOST THEOSTRICHPOST" id="ostrich2">
+      <h5><a href="#">Ostrich Post example 2</a></h5>
+      <p style="font-size: 13px">The content here doesn't really matter yet, it's just a tech demo.</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(ostrich2)">Save</button>
+    </div>
+  </div>
+
+  <div class="container" id="judge">
+    <h3>Decision</h3>
+    <form>
+      <div class="form-check form-check-inline">
+        <input type="radio" name="decision" value="real" class="form-check-input">
+        <label class="form-check-label" for="decision1">Real</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" name="decision" value="misleading" class="form-check-input">
+        <label class="form-check-label" for="decision2">Misleading</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" name="decision" value="fake" class="form-check-input">
+        <label class="form-check-label" for="decision3">Fake</label>
+      </div><br>
+      <input type="text" id="explanation" placeholder="Explain why."><br>
+      <button class="btn btn-primary btn-lg btn-block">Submit</button>
+    </form>
+  </div>
+  <div id="footer">
+    © Jonathan Gardner, 2019
+  </div>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
