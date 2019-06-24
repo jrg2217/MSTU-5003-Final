@@ -17,7 +17,6 @@ function searchTerm() {
     }
   }
   currentSearch = searchResults;
-  //Finally, sets the currentSearch to the same set of elements so that they can be removed (or altered in some way, if I implement some other kind of interaction into the page).
 }
 
 
