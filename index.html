@@ -92,19 +92,19 @@
     <h3>Decision</h3>
     <form>
       <div class="form-check form-check-inline">
-        <input type="radio" name="decision" value="real" class="form-check-input">
+        <input type="radio" name="decision" value="real" class="form-check-input" id="realRadio">
         <label class="form-check-label" for="decision1">Real</label>
       </div>
       <div class="form-check form-check-inline">
-        <input type="radio" name="decision" value="misleading" class="form-check-input">
+        <input type="radio" name="decision" value="misleading" class="form-check-input" id="misleadingRadio">
         <label class="form-check-label" for="decision2">Misleading</label>
       </div>
       <div class="form-check form-check-inline">
-        <input type="radio" name="decision" value="fake" class="form-check-input">
+        <input type="radio" name="decision" value="fake" class="form-check-input" id="fakeRadio">
         <label class="form-check-label" for="decision3">Fake</label>
       </div><br>
-      <input type="text" id="explanation" placeholder="Explain why."><br>
-      <button class="btn btn-primary btn-lg btn-block">Submit</button>
+      <input type="text" id="explanation" placeholder="Explain why." required><br>
+      <button class="btn btn-primary btn-lg btn-block" onclick="checkDecision()">Submit</button>
     </form>
   </div>
   <div id="footer">

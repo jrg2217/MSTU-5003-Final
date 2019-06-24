@@ -30,8 +30,19 @@ function closeNotes() {
 
 function saveResult(ele) {
   var result = ele.getElementsByTagName("p")[0].innerText;
-  //Takes the function parameter (the ID of the relevant search result) and retrieves the inner HTML of the first paragraph element
   var currentNotes = document.getElementById("notes").innerHTML;
   document.getElementById("notes").innerHTML = currentNotes + "<br>" + result + "<br>";
-  //Appends the results to any current notes that were already saved.
+}
+
+function checkDecision() {
+  var correctOrNot = document.getElementById("misleadingRadio").checked;
+  var explanation = document.getElementById("explanation").value;
+  if (explanation != "") {
+    if (correctOrNot) {
+      alert("Congratulations, you're correct!");
+    }
+    else {
+      alert("Not quite. Try searching for more clues.");
+    }
+  }
 }
