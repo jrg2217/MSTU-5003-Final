@@ -20,14 +20,8 @@
   background-color: #dddddd;
 }
 
-.articleURL {
-  width: 75%;
-  cursor: not-allowed;
-  margin: 3px;
-}
-
-.articleURL::placeholder {
-  opacity: 1;
+.articleContent {
+  margin: 0px 10px 10px 10px;
 }
 
 .articleHeader {
@@ -39,8 +33,42 @@
   color: black;
 }
 
-.articleContent {
-  margin: 0px 10px 10px 10px;
+.articleURL {
+  width: 75%;
+  cursor: not-allowed;
+  margin: 3px;
+}
+
+.articleURL::placeholder {
+  opacity: 1;
+}
+
+.btn-block {
+  width: 75%;
+  margin-left: 12.5%;
+}
+
+#closeNotes {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  opacity: 0.5;
+  background-color: #f4b642;
+}
+
+#closeNotes:hover {
+  cursor: pointer;
+}
+
+#explanation {
+  width: 75%;
+  height: 150px;
+}
+
+#footer {
+  text-align: center;
+  background-color: #5c93ed;
+  margin-top: 10px;
 }
 
 h1,
@@ -52,27 +80,6 @@ h4 {
 
 #judge {
   text-align: center;
-}
-
-#explanation {
-  width: 75%;
-  height: 150px;
-}
-
-.btn-block {
-  width: 75%;
-  margin-left: 12.5%;
-}
-
-#footer {
-  text-align: center;
-  background-color: #5c93ed;
-  margin-top: 10px;
-}
-
-.searchResult {
-  text-align: left;
-  display: none;
 }
 
 #notes {
@@ -104,14 +111,7 @@ h4 {
   cursor: pointer;
 }
 
-#closeNotes {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  opacity: 0.5;
-  background-color: #f4b642;
-}
-
-#closeNotes:hover {
-  cursor: pointer;
+.searchResult {
+  text-align: left;
+  display: none;
 }
