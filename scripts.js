@@ -30,8 +30,8 @@ function closeNotes() {
 
 function saveResult(ele) {
   var result = ele.getElementsByTagName("p")[0].innerText;
-  var currentNotes = document.getElementById("notes").innerHTML;
-  document.getElementById("notes").innerHTML = currentNotes + "<br>" + result + "<br>";
+  var currentNotes = document.getElementById("notesInput").value;
+  document.getElementById("notesInput").value = currentNotes + "\r\n" + result;
 }
 
 function checkDecision() {

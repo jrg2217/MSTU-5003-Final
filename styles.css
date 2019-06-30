@@ -95,7 +95,14 @@ h4 {
   display: none;
   outline: 1px solid black;
   box-shadow: 3px 3px 5px #222222;
+}
+
+#notesInput {
+  width: 100%;
+  height: 100%;
   overflow: scroll;
+  resize: none;
+  white-space: pre-wrap;
 }
 
 #openNotes {
