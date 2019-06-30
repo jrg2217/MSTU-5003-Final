@@ -27,58 +27,52 @@
 
   <div class="container">
     <div class="card article">
-      <input class="articleURL" type="text" placeholder="https://www.bluejaybugle.com/9322004/" readonly></input>
+      <input class="articleURL" type="text" placeholder="https://www.bluejaybugle.com/9292004/" readonly></input>
       <a class="articleHeader" href="#">
         <h3>The Bluejay Bugle</h3>
       </a>
-      <h4>Bird Senate candidate </h4><br>
-      <p class="articleContent"></p>
+      <h4>Bird Senate candidate Horace Beaksworth exposed for hoarding stolen corn</h4><br>
+      <p class="articleContent">Late Thursday night an anonymous tipster posted pictures of Bird Senate candidate Horace Beaksworth's stash of stolen corn, almost an entire year's worth. Beaksworth's stunning hypocrisy, as a candidate running on a platform of austerity in corn consumption, was condemned by birds all over the Bird Internet.</p>
     </div>
   </div>
 
-  <!--The concept is for users to search keywords that'll return additional information about the article, source, etc.-->
   <div id="search" class="container">
     <form>
       <input type="search" placeholder="What will you search for?" id="searchBar">
-      <button type="button" class="btn btn-primary" onclick="searchTerm()">Search</button>
+      <button type="button" class="btn btn-primary" onclick="searchTerm();instructionsContinued()">Search</button>
     </form>
   </div>
 
-  <div class="container">
-    <div class="card searchResult HOODTHEROBIN" id="htr1">
-      <h5><a href="#">GooseTube channel HoodTheRobin exposed for fraudulent videos</a></h5>
-      <p style="font-size: 13px">Popular GooseTube channel HoodTheRobin, known for exposing public figures' controversial opinions, was found to have selectively edited together clips to give the impression ...</p>
-      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(htr1)">Save to notes</button>
+  <div class="container" id="allSearchResults">
+    <div class="card searchResult BEAKSWORTH HORACEBEAKSWORTH" id="beaksworth1">
+      <h5><a href="#">All you need to know about Horace Beaksworth</a></h5>
+      <p style="font-size: 13px">Horace Beaksworth is a candidate for the Bird Senate from the state of Bird Montana. He's affiliated with the Too Much Corn Party and is running against incumbent Susan Magpie of the Free Corn For All Party ...</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(beaksworth1)">Save to notes</button>
     </div>
-    <div class="card searchResult HOODTHEROBIN" id="htr2">
-      <h5><a href="#">HoodTheRobin example 2</a></h5>
-      <p style="font-size: 13px">Blah blah blah silly bird puns blah blah blah blah blah ...</p>
-      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(htr2)">Save to notes</button>
+    <div class="card searchResult BEAKSWORTH HORACEBEAKSWORTH" id="beaksworth2">
+      <h5><a href="#">Horace Beaksworth dealing with fallout from leaked photo of corn stash</a></h5>
+      <p style="font-size: 13px">Facing outrage, Horace Beaksworth remains adamant that the leaked photo of his corn stash was doctored ...</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(beaksworth2)">Save to notes</button>
     </div>
-    <div class="card searchResult FEATHERBY BRUCEFEATHERBY" id="featherby1">
-      <h5><a href="#">Bird Presidential candidate Bruce Featherby: What you need to know</a></h5>
-      <p style="font-size: 13px">Bruce Featherby is a Bird Senator in the state of Bird Rhode Island, currently running for Bird President. He is a member of the Free Corn For All party ...</p>
-      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(featherby1)">Save to notes</button>
+    <div class="card searchResult FREECORN FREECORNFORALL FREECORNPARTY FREECORNFORALLPARTY" id="freecorn1">
+      <h5><a href="#">Free Corn Party: A who's who of donors</a></h5>
+      <p style="font-size: 13px">The Free Corn Party's donors include the Albatross Network ...</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(freecorn1)">Save to notes</button>
     </div>
-    <div class="card searchResult FEATHERBY BRUCEFEATHERBY" id="featherby2">
-      <h5><a href="#">Bruce Featherby example 2</a></h5>
-      <p style="font-size: 13px">Blah blah blah, just giving an example of how this might work, it's probably not the most efficient method of doing this but oh well ...</p>
-      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(featherby2)">Save to notes</button>
+    <div class="card searchResult BLUEJAYBUGLE THEBLUEJAYBUGLE BLUEJAY" id="bluejay1">
+      <h5><a href="#">All about the Bluejay Bugle</a></h5>
+      <p style="font-size: 13px">The Bluejay Bugle is a local news site in Bird Montana, owned by the larger Albatross Network ...</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(bluejay1)">Save to notes</button>
     </div>
-    <div class="card searchResult FEATHERBY BRUCEFEATHERBY" id="featherby3">
-      <h5><a href="#">Bruce Featherby example 3</a></h5>
-      <p style="font-size: 13px">JavaScript is fun!</p>
+    <div class="card searchResult ALBATROSS ALBATROSSNETWORK" id="albatross1">
+      <h5><a href="#">The Albatross Network: a quick primer</a></h5>
+      <p style="font-size: 13px">The Albatross Network is a media conglomerate that owns multiple magazines, newspapers, TV channels, and websites. Their assets include the Bluejay Bugle, and ...</p>
       <button class="btn btn-sm btn-outline-primary" onclick="saveResult(featherby3)">Save to notes</button>
     </div>
-    <div class="card searchResult OSTRICH OSTRICHPOST THEOSTRICHPOST" id="ostrich1">
-      <h5><a href="#">Ostrich Post example</a></h5>
-      <p style="font-size: 13px">Actually, The Ostrich Post is a fake website made up by a programming student.</p>
-      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(ostrich1)">Save to notes</button>
-    </div>
-    <div class="card searchResult OSTRICH OSTRICHPOST THEOSTRICHPOST" id="ostrich2">
-      <h5><a href="#">Ostrich Post example 2</a></h5>
-      <p style="font-size: 13px">The content here doesn't really matter yet, it's just a tech demo.</p>
-      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(ostrich2)">Save to notes</button>
+    <div class="card searchResult TOOMUCHCORN TOOMUCHCORNPARTY" id="toomuchcorn1">
+      <h5><a href="#">Too Much Corn Party proposes restrictions on media conglomerates</a></h5>
+      <p style="font-size: 13px">The Bird Senate Majority Leader announced that the Too Much Corn Party would seek to break up large media conglomerates after the next election ...</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(toomuchcorn1)">Save to notes</button>
     </div>
     <div class="card searchResult" id="noResults">
       <h5>No results found!</h5>
@@ -100,7 +94,7 @@
         <input type="radio" name="decision" value="fake" class="form-check-input" id="fakeRadio">
         <label class="form-check-label" for="decision3">Fake</label>
       </div><br>
-      <input type="text" id="explanation" placeholder="Explain why." required><br>
+      <textarea type="text" id="explanation" placeholder="Explain why." required></textarea><br>
       <button class="btn btn-primary btn-lg btn-block" onclick="checkDecision()">Submit</button>
     </form>
   </div>
