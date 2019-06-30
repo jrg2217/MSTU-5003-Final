@@ -1,0 +1,146 @@
+#header {
+  background-color: #5c93ed;
+  text-align: center;
+}
+
+#header a {
+  color: black;
+  text-decoration: underline;
+}
+
+#search {
+  text-align: center;
+}
+
+.article {
+  margin: 0px 50px 0px 50px;
+  border: 3px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #444444;
+  background-color: #dddddd;
+}
+
+.articleContent {
+  margin: 0px 10px 10px 10px;
+}
+
+.articleHeader {
+  color: black;
+}
+
+.articleHeader:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.articleURL {
+  width: 75%;
+  cursor: not-allowed;
+  margin: 3px;
+}
+
+.articleURL::placeholder {
+  opacity: 1;
+}
+
+#birdPic {
+  position: fixed;
+  border-radius: 50%;
+  left: 150px;
+  box-shadow: 3px 3px 5px #777777;
+}
+
+.btn-block {
+  width: 75%;
+  margin-left: 12.5%;
+}
+
+#closeNotes {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  opacity: 0.5;
+  background-color: #f4b642;
+}
+
+#closeNotes:hover {
+  cursor: pointer;
+}
+
+#explanation {
+  width: 75%;
+  height: 150px;
+}
+
+#footer {
+  text-align: center;
+  background-color: #5c93ed;
+  margin-top: 10px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+}
+
+#instructions {
+  position: fixed;
+  max-width: 50%;
+  max-height: 150px;
+  left: 300px;
+  top: 30%;
+  display: block;
+  z-index: 3;
+  background-image: linear-gradient(0deg, #e0eb6a, #e1e890);
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px #aaaaaa;
+  padding: 10px 10px 10px 10px;
+  font-size: 20px;
+}
+
+#judge {
+  text-align: center;
+}
+
+#notes {
+  position: fixed;
+  width: 75%;
+  height: 75%;
+  left: 12.5%;
+  right: 12.5%;
+  top: 12.5%;
+  bottom: 12.5%;
+  background-color: white;
+  z-index: 2;
+  display: none;
+  outline: 1px solid black;
+  box-shadow: 3px 3px 5px #222222;
+}
+
+#notesInput {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  resize: none;
+  white-space: pre-wrap;
+}
+
+#openNotes {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  opacity: 0.5;
+  background-color: #f4b642;
+  z-index: 1;
+}
+
+#openNotes:hover {
+  cursor: pointer;
+}
+
+.searchResult {
+  text-align: left;
+  display: none;
+}

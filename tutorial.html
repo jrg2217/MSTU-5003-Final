@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bird Elections</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/efb85c0905.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="tutorialstyles.css" type="text/css">
+  <script type="text/javascript" src="tutorialscripts.js"></script>
+</head>
+
+<body onload="displayInstructions()">
+  <div id="header" class="jumbotron jumbotron-fluid">
+    <h1>Bird Elections</h1>
+    <hr>
+    <h3>An educational browser game about<br>news, propaganda, and misinformation</h3>
+    <a href="https://hackmd.io/C09pWphoROmKaxW20jyXnA?view" target="_blank">(Supplemental Rationale Document) <i class="fas fa-external-link-alt"></i></a>
+  </div>
+
+  <div id="openNotes" onclick="openNotes()">Open Notes</div>
+  <div id="notes">
+    <div id="closeNotes" onclick="closeNotes()">Close Notes</div>
+    <textarea id="notesInput"></textarea>
+  </div>
+  <div id="instructions" onclick="proceedInstructions()"></div>
+
+  <div class="container">
+    <div class="card article">
+      <input class="articleURL" type="text" placeholder="https://www.bluejaybugle.com/9322004/" readonly></input>
+      <a class="articleHeader" href="#">
+        <h3>The Bluejay Bugle</h3>
+      </a>
+      <h4>Bird Senate candidate </h4><br>
+      <p class="articleContent"></p>
+    </div>
+  </div>
+
+  <!--The concept is for users to search keywords that'll return additional information about the article, source, etc.-->
+  <div id="search" class="container">
+    <form>
+      <input type="search" placeholder="What will you search for?" id="searchBar">
+      <button type="button" class="btn btn-primary" onclick="searchTerm()">Search</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="card searchResult HOODTHEROBIN" id="htr1">
+      <h5><a href="#">GooseTube channel HoodTheRobin exposed for fraudulent videos</a></h5>
+      <p style="font-size: 13px">Popular GooseTube channel HoodTheRobin, known for exposing public figures' controversial opinions, was found to have selectively edited together clips to give the impression ...</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(htr1)">Save to notes</button>
+    </div>
+    <div class="card searchResult HOODTHEROBIN" id="htr2">
+      <h5><a href="#">HoodTheRobin example 2</a></h5>
+      <p style="font-size: 13px">Blah blah blah silly bird puns blah blah blah blah blah ...</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(htr2)">Save to notes</button>
+    </div>
+    <div class="card searchResult FEATHERBY BRUCEFEATHERBY" id="featherby1">
+      <h5><a href="#">Bird Presidential candidate Bruce Featherby: What you need to know</a></h5>
+      <p style="font-size: 13px">Bruce Featherby is a Bird Senator in the state of Bird Rhode Island, currently running for Bird President. He is a member of the Free Corn For All party ...</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(featherby1)">Save to notes</button>
+    </div>
+    <div class="card searchResult FEATHERBY BRUCEFEATHERBY" id="featherby2">
+      <h5><a href="#">Bruce Featherby example 2</a></h5>
+      <p style="font-size: 13px">Blah blah blah, just giving an example of how this might work, it's probably not the most efficient method of doing this but oh well ...</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(featherby2)">Save to notes</button>
+    </div>
+    <div class="card searchResult FEATHERBY BRUCEFEATHERBY" id="featherby3">
+      <h5><a href="#">Bruce Featherby example 3</a></h5>
+      <p style="font-size: 13px">JavaScript is fun!</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(featherby3)">Save to notes</button>
+    </div>
+    <div class="card searchResult OSTRICH OSTRICHPOST THEOSTRICHPOST" id="ostrich1">
+      <h5><a href="#">Ostrich Post example</a></h5>
+      <p style="font-size: 13px">Actually, The Ostrich Post is a fake website made up by a programming student.</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(ostrich1)">Save to notes</button>
+    </div>
+    <div class="card searchResult OSTRICH OSTRICHPOST THEOSTRICHPOST" id="ostrich2">
+      <h5><a href="#">Ostrich Post example 2</a></h5>
+      <p style="font-size: 13px">The content here doesn't really matter yet, it's just a tech demo.</p>
+      <button class="btn btn-sm btn-outline-primary" onclick="saveResult(ostrich2)">Save to notes</button>
+    </div>
+    <div class="card searchResult" id="noResults">
+      <h5>No results found!</h5>
+    </div>
+  </div>
+
+  <div class="container" id="judge">
+    <h3>Decision</h3>
+    <form>
+      <div class="form-check form-check-inline">
+        <input type="radio" name="decision" value="real" class="form-check-input" id="realRadio">
+        <label class="form-check-label" for="decision1">Real</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" name="decision" value="misleading" class="form-check-input" id="misleadingRadio">
+        <label class="form-check-label" for="decision2">Misleading</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" name="decision" value="fake" class="form-check-input" id="fakeRadio">
+        <label class="form-check-label" for="decision3">Fake</label>
+      </div><br>
+      <input type="text" id="explanation" placeholder="Explain why." required><br>
+      <button class="btn btn-primary btn-lg btn-block" onclick="checkDecision()">Submit</button>
+    </form>
+  </div>
+  <div id="footer">
+    © Jonathan Gardner, 2019
+  </div>
+</body>
+
+</html>
