@@ -34,6 +34,7 @@ function proceedInstructions() {
   switch (i) {
     case 3:
       document.getElementById("instructions").className = "shift";
+      document.getElementById("birdPic").className = "shift";
       document.querySelector(".container").style.filter = "blur(0px)";
       break;
     case 6:
