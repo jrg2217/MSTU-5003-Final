@@ -56,10 +56,12 @@ function proceedInstructions() {
 }
 
 function instructionsContinued() {
-  document.getElementById("instructions").style.display = "block";
-  document.getElementById("allSearchResults").style.filter = "blur(0px)";
-  document.getElementById("openNotes").style.filter = "blur(0px)";
-  document.getElementById("notes").style.filter = "blur(0px)";
+  if (i <= 8) {
+    document.getElementById("instructions").style.display = "block";
+    document.getElementById("allSearchResults").style.filter = "blur(0px)";
+    document.getElementById("openNotes").style.filter = "blur(0px)";
+    document.getElementById("notes").style.filter = "blur(0px)";
+  }
 }
 
 var currentSearch = 0;
@@ -103,10 +105,13 @@ function checkDecision() {
   var explanation = document.getElementById("explanation").value;
   if (explanation != "") {
     if (correctOrNot) {
-      alert("Congratulations, you're correct!");
+      var congratsMessageHTML = '<div id="congratsMessage" style="position: fixed; top: 5%; left: 20%; z-index: 3"><img src="images/congrats.gif" alt="Congratulations"></div>';
+      document.body.innerHTML = document.body.innerHTML + congratsMessageHTML;
+      return false;
     }
     else {
-      alert("Not quite. Try searching for more clues.");
+      document.getElementById("explanation").value = "Not quite. Try searching for other clues.";
+      return false;
     }
   }
 }

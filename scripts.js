@@ -39,10 +39,13 @@ function checkDecision() {
   var explanation = document.getElementById("explanation").value;
   if (explanation != "") {
     if (correctOrNot) {
-      alert("Congratulations, you're correct!");
+      var congratsMessageHTML = '<div id="congratsMessage" style="position: fixed; top: 5%; left: 20%; z-index: 3"><img src="images/congrats.gif" alt="Congratulations"></div>';
+      document.body.innerHTML = document.body.innerHTML + congratsMessageHTML;
+      return false;
     }
     else {
-      alert("Not quite. Try searching for more clues.");
+      document.getElementById("explanation").value = "Not quite. Try searching for other clues.";
+      return false;
     }
   }
 }
